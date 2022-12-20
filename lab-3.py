@@ -47,7 +47,7 @@ def upload_output_to_S3(log_file_name):
     # context manager https://book.pythontips.com/en/latest/context_managers.html
     with open(log_file_name, 'rb') as opened_file:
         file = open(log_file_name, "rb")
-        s3.upload_fileobj(file, "<FMI1>", log_file_name)
+        s3.upload_fileobj(file, "project-coursera-lab3", log_file_name)
         file.close()
 
 if __name__ == "__main__":
